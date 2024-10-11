@@ -1,0 +1,321 @@
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; z-index:-1; }
+:root{
+	--text-color: #302e29;
+	--main-color: #00a2ffd2;
+	--second-color: #858585;
+	--bg-color: #fffbf6;
+	--big-font: 4.5rem;
+	--h2-font: 2.6rem;
+	--p-font: 1.1rem;
+}
+
+
+.mapboxgl-popup {
+        max-width: 200px;
+        font-size: 16px;
+      }
+      
+      .popup-title {
+        color: #f60f0f;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      .popup-description {
+        color: #f8f7f7;
+        margin-top: 0;
+      }
+      .hidden {
+        display: none;
+      }
+      
+      .div-boton{
+        position: absolute;
+        bottom: 50px;
+	      width: 100%;
+        justify-content: center;
+      }
+      #boton1,#boton2{
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        color: var(--main-color);
+        padding: 5px 15px;
+        border: solid 3px var(--main-color);
+        border-radius: 8px;
+        background: white;
+        margin-bottom: 10px;
+      }
+
+      #boton1 i{
+        font-size: 22px;
+      }
+
+      .tols{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: solid #302e29;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 8px;
+        top: 22%;
+        font-size: 25px;
+        background-color: #302e29;
+        color: #ffffff;
+      }
+
+      .emergent{
+        font-family: 'Raleway', sans-serif;
+        color: #ffffff;
+        text-align: center;
+        border: solid #302e29;
+        border-radius: 10px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        top: 22%;
+        right: 50px;
+        background-color: #302e29d5;
+        display: none;
+      }
+
+    
+
+
+
+      select {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        outline:0;
+        box-shadow:none;
+        border:0!important;
+        background: #5c6664;
+        background-image: none;
+        flex: 1;
+        padding: 0 .5em;
+        color:#fff;
+        cursor:pointer;
+        font-size: 1em;
+        font-family: 'Open Sans', sans-serif;
+        top: 15px;
+     }
+     select::-ms-expand {
+        display: none;
+     }
+     .select {
+        position: relative;
+        display: flex;
+        width: 20em;
+        height: 3em;
+        line-height: 3;
+        background: #5c6664;
+        overflow: hidden;
+        border-radius: .25em;
+     }
+     .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #2b2e2e;
+        cursor:pointer;
+        pointer-events:none;
+        transition:.25s all ease;
+     }
+     .select:hover::after {
+        color: #23b499;
+     }
+     
+     .simbologia{
+      position: absolute;
+      display: flex;
+      padding: 10px 0 0 0;
+      width: fit-content;
+    
+     }
+
+     .ida{
+      display: flex;
+      font-size: 40px;
+      font-family: 'Raleway', sans-serif;
+      color: #f60f0f;
+      
+     }
+
+     .ida div{
+      font-size: 20px;
+      padding: 6px 0 0 0;
+      font-weight: 600;
+    
+     }
+   
+     .vuelta{
+      display: flex;
+      font-size: 40px;
+      font-family: 'Raleway', sans-serif;
+      margin: 0 0 0 10px;
+      color: #1f7ce6;
+     
+     }
+
+     .vuelta div{
+      font-size: 20px;
+      padding: 6px 0 0 0 ;
+      font-weight: 600;
+     
+     }
+
+
+
+
+
+
+
+     /* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  transform: rotate(90deg);
+}
+
+.mode{
+position: absolute;
+top: 22%;
+right: -6px;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 75, 75);
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: rgb(255, 230, 2);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #c2c2c2;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7a7a7a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+.slider::after {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  top: 10%;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  background-color: rgb(75, 75, 75);
+  transition: ease 0.4s;
+}
+
+input:checked + .slider::after {
+  left: 80%;
+  width: 0px;
+  height: 0px;
+}
+.buscador {
+  background-color: #FFFFFF; /* Blanco */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buscador input[type="search"] {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.buscador button[type="button"] {
+  width: 30%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFC107; /* Naranja */
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buscador button[type="button"]:hover {
+  background-color: #FFA07A; /* Naranja claro */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .buscador {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buscador input[type="search"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .buscador button[type="button"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .buscador {
+    padding: 5px;
+  }
+  .buscador input[type="search"] {
+    height: 30px;
+    padding: 5px;
+  }
+  .buscador button[type="button"] {
+    height: 30px;
+    padding: 5px;
+  }
+}

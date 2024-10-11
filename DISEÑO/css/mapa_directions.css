@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--text-color: #302e29;
+	--main-color: #ff9100;
+	--second-color: #858585;
+	--bg-color: #fffbf6;
+	--big-font: 4.5rem;
+	--h2-font: 2.6rem;
+	--p-font: 1.1rem;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+}
+.div_buttons{
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+}
+.marcar_ruta{
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: var(--main-color);
+	padding: 5px 15px;
+	border: solid 3px var(--main-color);
+	border-radius: 8px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background: white;
+}
+#volver{
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: var(--main-color);
+	padding: 5px 15px;
+	border: solid 3px var(--main-color);
+	border-radius: 8px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background: white;
+}
